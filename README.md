@@ -1,6 +1,7 @@
 # OAuth 2.1 Password Grant Type in Golang
 ![workflow](https://github.com/syniol/golang-oauth2/actions/workflows/makefile.yml/badge.svg)
 
+
 Implementation of standard OAuth 2.1 for Password Grant type in Golang and its native HTTP server.
 
 
@@ -96,14 +97,6 @@ local environment. You will need database & cache storage from docker; you could
 ```
 
 ![img](https://github.com/syniol/golang-oauth-password-grant/assets/68777073/5c24392a-29df-41c2-8f11-fd32a1053222)
-
-
-### Todos
- * [ ] Add more documents about this repository and RFC Standard for OAuth 2.1 especially for `password_grant`
- * [ ] Convert Http Error response to JSON response `errors: []`
- * [ ] Investigate possibility of volume share for Redis & Go (app) to share TLS certs
- * [ ] Separate the Docker network for proxy and app to exclude Database (Postgres) & Cache (Redis)
- * [ ] Increase code coverage
 
 
 #### Credits
