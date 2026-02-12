@@ -102,6 +102,4 @@ local environment. You will need database & cache storage from docker; you could
 #### Credits
 Author: [Hadi Tajallaei](mailto:hadi@syniol.com)
 
-Copyright &copy; 2023-2025 Syniol Limited. All rights reserved.
-
-_Please see a [LICENSE file](https://github.com/syniol/golang-oauth-password-grant/blob/main/LICENSE)_
+Copyright &copy; 2023-2026 Syniol Limited. All rights reserved.
