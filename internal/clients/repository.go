@@ -7,9 +7,10 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"strings"
+
 	"oauth-password/pkg/database"
 	"oauth-password/pkg/oauth"
-	"strings"
 )
 
 type Repository struct {
@@ -42,8 +43,14 @@ func (r *Repository) InsertSingle(
 		data,
 	)
 	if err != nil {
-		if strings.Contains(err.Error(), `duplicate key value violates unique constraint "client_credential_username_idx"`) {
-			return nil, fmt.Errorf(`username already exists`)
+		if strings.Contains(
+			err.Error(),
+			"duplicate",
+		) && strings.Contains(
+			err.Error(),
+			"client_credential_username_idx",
+		) {
+			return nil, fmt.Errorf("username '%s' already exists", clientCredential.Username)
 		}
 
 		log.Println(clientCredential.Username, err)
